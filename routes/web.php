@@ -17,8 +17,13 @@ Route::get('/single',"CommentsController@page")->name('postcomment');
 Route::get('/category', function () {
     return view('/TechSite/category');
 });
-Route::get('/blog', function () {
-    return view('/TechSite/blog');
-});
+Route::get('/blog',"NewsController@page")->name('blog');
+
+
+Route::get('/add_news','NewsController@add_news')->name('add_news');
+
+Route::post('/add_news','NewsController@store')->name('storenews');
+
+
 Route::post("/",'CommentsController@store')->name('storecomments');
 
