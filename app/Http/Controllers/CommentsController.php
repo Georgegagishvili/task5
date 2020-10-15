@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comments;
+use App\News;
 
 class CommentsController extends Controller
 {
 	public function page()
 	{
 		$comments = Comments::get();
-		return view('techsite.single',['comments'=>$comments]);
+		$news = News::get();
+		return view('techsite.single',['comments'=>$comments],['news'=>$news]);
 	}
     public function store(Request $request)
     {

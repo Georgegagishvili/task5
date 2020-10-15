@@ -139,7 +139,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="#navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav">
-                            <li class="active"><a href="index.html">News</a></li>
+                            <li class="active"><a href="blog">News</a></li>
                             <li><a href="category.html">Mobile</a></li>
                             <li><a href="blog.html">Tablet</a></li>
                             <li><a href="blog.html">Gadgets</a></li>
@@ -203,7 +203,7 @@
 <section id="entity_section" class="entity_section">
 <div class="container">
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-8">`
 <div class="entity_wrapper">
     <div class="entity_title">
         <h1><a href="#">Chevrolet car-saving technology delivers 'superhuman' sight when you need it most</a></h1>
@@ -965,7 +965,7 @@
     <div>
         <div>
             <ul id="menu">
-                <li class="active"><a href="blog.html">News</a></li>
+                <li><a href="">News</a></li>
                 <li><a href="category.html">Mobile</a></li>
                 <li><a href="blog.html">Tablet</a></li>
                 <li><a href="category.html">Gadgets</a></li>
