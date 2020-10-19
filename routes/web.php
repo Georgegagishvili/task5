@@ -31,3 +31,6 @@ Route::post("/admindestroy",'NewsController@destroy')->name('admindestroy');
 
 Route::get('single={id}','NewsController@show')->name('showmore');
 
+
+Route::get('/edit={id}','NewsController@edit')->name('adminedit');
+

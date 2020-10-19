@@ -216,7 +216,7 @@
     <div>
         <form style = 'display:inline-block;'>
             <form style = 'display:inline-block;'>
-                <button class = 'btn btn-warning'>Edit</button>
+                <a href = '{{route('adminedit',["id"=>$new->id])}}' class = 'btn btn-warning'>Edit</a>
             </form>
 
             <form method="POST" action = "{{ 'admindestroy' }}" style = 'display: inline-block;'>

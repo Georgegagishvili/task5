@@ -44,7 +44,9 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $new = News::find($id)->firstOrFail();
+        return view('techsite.edit',['new'=>$new]);
+
     }
 
     /**
@@ -54,9 +56,13 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        News::where("id",$request->input("id"))->update([
+            "title"=>$request->input("title"),
+            "author"=>$request->input("author"),
+            "text"=>$request->input("text"),
+        ]);
     }
 
     /**
