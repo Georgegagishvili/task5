@@ -27,3 +27,7 @@ Route::post('/add_news','NewsController@store')->name('storenews');
 
 Route::post("/",'CommentsController@store')->name('storecomments');
 
+Route::post("/admindestroy",'NewsController@destroy')->name('admindestroy');
+
+Route::get('single={id}','NewsController@show')->name('showmore');
+

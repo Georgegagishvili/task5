@@ -205,13 +205,32 @@
 <div class="row">
 <div class="col-md-8">
     <a href="/add_news"> 
-        <button>ADD NEWS</button>
+        <button class = 'btn-primary'>ADD NEWS</button>
     </a>
     @foreach($news as $new)
 <div class="entity_wrapper">
     <div class="entity_title">
-        <h1><a href="single" target="_self">{{ $new->title}}</a>
+        <h1><a href="{{ route('showmore',["id"=>$new->id])}}" target="_self">{{ $new->title}}</a>
         </h1>
+    </div>
+    <div>
+        <form style = 'display:inline-block;'>
+            <form style = 'display:inline-block;'>
+                <button class = 'btn btn-warning'>Edit</button>
+            </form>
+
+            <form method="POST" action = "{{ 'admindestroy' }}" style = 'display: inline-block;'>
+                @csrf
+                <input type="hidden" name="id" value = '{{ $new->id }}'>
+                <button class = 'btn btn-danger'>Delete</button>
+            </form>
+
+            <form style = 'display:inline-block;'>
+                <a class = 'btn btn-success' href = '{{ route('showmore',["id"=>$new->id])}}'>See more
+                </a>
+            </form>            
+        </form>
+
     </div>
     <!-- entity_title -->
 

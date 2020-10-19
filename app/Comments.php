@@ -8,6 +8,6 @@ class Comments extends Model
 {
 	public $timestamps = false;
     protected $fillable = [
-    	"name","email","comment"
+    	"news_id","name","email","comment"
     ];  
 }

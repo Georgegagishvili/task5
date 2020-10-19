@@ -17,6 +17,7 @@ class CommentsController extends Controller
     public function store(Request $request)
     {
     	Comments::create([
+            "news_id"=>$request->input("id"),
     		"name"=>$request->input("name"),
     		"email"=>$request->input("gmail"),
     		"comment"=>$request->input("comment"),
